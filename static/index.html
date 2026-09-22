@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RAG Chatbot</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+</head>
+
+
+<body>
+
+<div class="app">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <h2>RAG Chatbot</h2>
+
+            <button
+                id="newChatBtn"
+                class="new-chat-btn"
+            >
+                + New Chat
+            </button>
+
+        </div>
+
+
+        <!-- Previous Chats -->
+
+        <div class="previous-chats">
+
+            <h3>Previous Chats</h3>
+
+            <div
+                id="chatList"
+                class="chat-list"
+            >
+                <div class="chat-list-loading">
+                    Loading chats...
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Current Chat -->
+
+        <div class="chat-info">
+
+            <span>Current Chat</span>
+
+            <strong id="chatId">
+                No chat selected
+            </strong>
+
+        </div>
+
+
+        <!-- PDF Upload -->
+
+        <div class="upload-section">
+
+            <label
+                for="pdfInput"
+                class="upload-label"
+            >
+                Upload PDF
+            </label>
+
+
+            <input
+                type="file"
+                id="pdfInput"
+                accept=".pdf,application/pdf"
+            >
+
+
+            <button
+                id="uploadBtn"
+                class="upload-btn"
+            >
+                Upload PDF
+            </button>
+
+
+            <p id="uploadStatus"></p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CHAT
+    ========================== -->
+
+    <main class="chat-container">
+
+
+        <!-- Header -->
+
+        <header class="chat-header">
+
+            <div>
+
+                <h1>
+                    Document Assistant
+                </h1>
+
+                <p>
+                    Ask questions about your uploaded PDF
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- Messages -->
+
+        <section
+            id="messages"
+            class="messages"
+        >
+
+            <div class="welcome-message">
+
+                <h2>
+                    Welcome 👋
+                </h2>
+
+                <p>
+                    Select a previous chat or create
+                    a new chat to get started.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Input -->
+
+        <footer class="chat-input-area">
+
+            <div class="input-wrapper">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Ask something about your PDF..."
+                    autocomplete="off"
+                >
+
+
+                <button
+                    id="sendBtn"
+                >
+                    Send
+                </button>
+
+            </div>
+
+
+            <p class="input-hint">
+
+                Your questions are answered using
+                the uploaded document.
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="/static/js/script.js"></script>
+
+</body>
+
+</html>
+
